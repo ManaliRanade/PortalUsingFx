@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/11.0.2"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+    <Label layoutX="261.0" layoutY="35.0" prefHeight="18.0" prefWidth="78.0" text="LOGIN">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+    <Label layoutX="222.0" layoutY="80.0" text="Please enter your credentials:" />
+
+    <TextField id="Username_textbox" fx:id="Username_textbox"
+               layoutX="220.0" layoutY="160.0" prefHeight="26.0" prefWidth="162.0" />
+    <Label id="Username_textbox_label" fx:id="Username_textbox_label"
+           layoutX="220.0" layoutY="135.0" text="Username:" />
+
+    <TextField id="Password_textbox" fx:id="Password_textbox"
+               layoutX="220.0" layoutY="222.0" prefHeight="26.0" prefWidth="162.0" />
+    <Label id="Password_textbox_label" fx:id="Password_textbox_label"
+           layoutX="220.0" layoutY="200.0" text="Password:" />
+</AnchorPane>

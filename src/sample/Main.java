@@ -16,23 +16,24 @@ public class Main extends Application {
     private BorderPane rootLayout;
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        this.primaryStage=primaryStage;
-        this.primaryStage.setTitle("Student Doubt Portal");
-        initRootLayout();
-        showStudentDoubtView();
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("LoginFirst.fxml"));
 
-        //Parent root = FXMLLoader.load(getClass().getResource("StudentDoubtView.fxml"));
+        Scene scene = new Scene(root, 300, 275);
 
+        stage.setTitle("Query Portal");
+        stage.setScene(scene);
+        stage.show();
     }
 
-    private void showStudentDoubtView() throws IOException {
+
+    private void showLoginFirst() throws IOException {
         try{
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/StudentDoubtView.fxml"));
-            AnchorPane StudentOperationsView = (AnchorPane) loader.load();
+            loader.setLocation(Main.class.getResource("LoginFirst.fxml"));
+            AnchorPane LoginFirstView = (AnchorPane) loader.load();
 
-            rootLayout.setCenter(StudentOperationsView);
+            rootLayout.setCenter(LoginFirstView);
         }
         catch(IOException e){
             e.printStackTrace();
