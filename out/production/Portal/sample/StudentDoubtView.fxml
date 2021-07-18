@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TextField id="USN_textbox" layoutX="28.0" layoutY="42.0" />
+            <Label id="USN_textbox_label" layoutX="28.0" layoutY="24.0" text="USN:" />
+            <TextField id="Student_name_textbox" layoutX="238.0" layoutY="42.0" />
+            <Label id="Name_textbox_label" layoutX="238.0" layoutY="24.0" text="Name:" />
+            <RadioButton id="regular_class_doubt" layoutX="28.0" layoutY="107.0" mnemonicParsing="false" text="Regular class doubt clarification" />
+            <RadioButton id="test_quiz_doubt" layoutX="29.0" layoutY="132.0" mnemonicParsing="false" text="Doubts regarding tests and quizzes" />
+            <Label id="select_type_of_query_label" layoutX="27.0" layoutY="81.0" text="Select the type of query:" />
+            <TextArea id="student_doubt_textbox" layoutX="27.0" layoutY="212.0" prefHeight="173.0" prefWidth="476.0" />
+            <Label id="comments_label_doubt_box" layoutX="27.0" layoutY="191.0" text="Comments, if any:" />
+            <CheckBox id="notification_enable_button" layoutX="342.0" layoutY="191.0" mnemonicParsing="false" text="Notify me about response" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

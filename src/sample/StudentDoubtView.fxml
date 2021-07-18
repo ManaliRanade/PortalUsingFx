@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10"
+          xmlns="http://javafx.com/javafx/11.0.2"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+                  minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TextField id="USN_textbox" fx:id="USN_textbox" layoutX="28.0" layoutY="42.0" />
+            <Label id="USN_textbox_label" fx:id="USN_textbox_label" layoutX="28.0" layoutY="24.0" text="USN:" />
+            <Label id="Course_Name_textbox_label" fx:id="Course_Name_textbox_label"
+                   layoutX="27.0" layoutY="85.0" text="Course Name:" />
+            <TextArea id="student_doubt_textbox" layoutX="27.0" layoutY="188.0" prefHeight="173.0" prefWidth="476.0" />
+            <Label id="comments_label_doubt_box" layoutX="27.0" layoutY="165.0" text="Post your query:" />
+            <ComboBox fx:id="course_name_list" layoutX="27.0" layoutY="119.0" prefHeight="26.0" prefWidth="149.0">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:id="OOPS" fx:value="OOPS" />
+                     <String fx:id="DAA" fx:value="DAA" />
+                     <String fx:id="MCES" fx:value="MCES" />
+                     <String fx:id="CN" fx:value="CN" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <Button fx:id="submit_query_button" layoutX="503.0" layoutY="29.0" mnemonicParsing="false" text="Submit" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
