@@ -1,35 +1,52 @@
 package sample;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import javax.management.Query;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
 
 public class Controller {
+    /*
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("LoginFirst.fxml"));
 
-    @FXML
-    private Button student_login_button,teacher_login_button;
+        Scene scene = new Scene(root, 300, 275);
 
-    @FXML
-    private void showHome(ActionEvent event) throws IOException {
-        Stage stage;
-        Parent root;
-        if (event.getSource() == student_login_button) {
-            stage = (Stage) student_login_button.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("StudentHome.fxml"));
-        } else {
-            stage = (Stage) teacher_login_button.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("TeacherHome.fxml"));
-        }
-
-        Scene scene = new Scene(root, 600, 275);
+        stage.setTitle("FXML Welcome");
         stage.setScene(scene);
         stage.show();
     }
+     */
+
+
+//    public static ObservableList<Query> getAllRecords() throws ClassNotFoundException,SQLException {
+//        String dbName = "Students";
+//        String userName = "root";
+//        String password = "";
+//        String dburl = "jdbc:mysql://localhost:3306/Students?useSSL=false";
+//        String sqlq = "select * from users";
+//        try{
+//
+//        }
+//        catch (SQLException e){
+//            System.out.println("sql Error Occurred");
+//            e.printStackTrace();
+////            throw e;
+////        }
+//    }
+
 }
