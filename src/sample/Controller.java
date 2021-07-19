@@ -93,12 +93,13 @@ public class Controller {
             String sql2 = "INSERT INTO `query` (`USN`, `query`,`Subject`) VALUES ('"+usn+"','"+doubt+"','"+course+"')";
             statement.executeUpdate(sql2);
 
+            stage = (Stage) submit_query_button.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("StudentHome.fxml"));
+            Scene scene = new Scene(root, 800, 400);
+            stage.setScene(scene);
+            stage.show();
         }
 
-
-//        Scene scene = new Scene(root, 800, 400);
-//        stage.setScene(scene);
-//        stage.show();
     }
 
 
