@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StudentHomeController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
 
     <Label layoutX="261.0" layoutY="35.0" prefHeight="18.0" prefWidth="78.0" text="HOME">
         <font>
@@ -13,9 +14,6 @@
     </Label>
     <Label layoutX="159.0" layoutY="80.0" text="Welcome to QueryPortal! What would you like to do?" />
 
-    <Button id="view_query_button" fx:id="view_query_button"
-            layoutX="193.0" layoutY="185.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="214.0" text="View My Queries" />
-    <Button id="register_query_button" fx:id="register_query_button"
-            onAction="#showStudentDoubt"
-            layoutX="193.0" layoutY="130.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="214.0" text="Register a Query" />
+    <Button id="view_doubts_button" fx:id="view_doubts_button" layoutX="193.0" layoutY="185.0" mnemonicParsing="false" onAction="#goToRegister" prefHeight="43.0" prefWidth="214.0" text="View My Queries" />
+    <Button id="register_query_button" fx:id="register_query_button" layoutX="193.0" layoutY="130.0" mnemonicParsing="false" onAction="#goToRegister" prefHeight="43.0" prefWidth="214.0" text="Register a Query" />
 </AnchorPane>
