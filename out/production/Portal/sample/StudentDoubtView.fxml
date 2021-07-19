@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import javafx.collections.FXCollections?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
@@ -22,10 +16,15 @@
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <children>
-            <TextField id="USN_textbox" fx:id="USN_textbox" layoutX="28.0" layoutY="42.0" />
-            <Label id="USN_textbox_label" fx:id="USN_textbox_label" layoutX="28.0" layoutY="24.0" text="USN:" />
-            <Label id="Course_Name_textbox_label" fx:id="Course_Name_textbox_label" layoutX="27.0" layoutY="85.0" text="Course Name:" />
-            <TextArea id="student_doubt_textbox" fx:id="query_detail" layoutX="27.0" layoutY="188.0" prefHeight="173.0" prefWidth="476.0" />
+            <Label layoutX="201.0" layoutY="14.0" prefHeight="35.0" prefWidth="128.0" text="REGISTER QUERY">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField id="USN_textbox" fx:id="USN_textbox" layoutX="27.0" layoutY="62.0" />
+            <Label id="USN_textbox_label" fx:id="USN_textbox_label" layoutX="27.0" layoutY="44.0" text="USN:" />
+            <Label id="Course_Name_textbox_label" fx:id="Course_Name_textbox_label" layoutX="27.0" layoutY="98.0" text="Course Name:" />
+            <TextArea id="student_doubt_textbox" layoutX="27.0" layoutY="188.0" prefHeight="173.0" prefWidth="476.0" />
             <Label id="comments_label_doubt_box" layoutX="27.0" layoutY="165.0" text="Post your query:" />
             <ComboBox fx:id="course_name_list" layoutX="27.0" layoutY="119.0" prefHeight="26.0" prefWidth="149.0">
                <items>
@@ -37,6 +36,7 @@
                   </FXCollections>
                </items>
             </ComboBox>
+
             <Button fx:id="submit_query_button" layoutX="503.0" layoutY="29.0" mnemonicParsing="false" onAction="#saveData" text="Submit" />
             <TextField fx:id="course_name" layoutX="239.0" layoutY="120.0" />
             <Label id="Course_Name_textbox_label" fx:id="Course_Name_textbox_label1" layoutX="255.0" layoutY="93.0" text="Course Name:" />
