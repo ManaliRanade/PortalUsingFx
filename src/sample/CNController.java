@@ -22,7 +22,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-public class TableController implements Initializable {
+public class CNController implements Initializable {
 
     @FXML
     private TableView<ModelTable> queryTable;
@@ -36,13 +36,14 @@ public class TableController implements Initializable {
 
     ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
 
-//    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle)  {
+    //    @Override
+    public  void initialize(URL url, ResourceBundle resourceBundle)  {
+        TableView.setEditable(true);
         try{
             connectionClass connectionClass = new connectionClass();
             Connection con = connectionClass.getConnection();
 
-            ResultSet rs = con.createStatement().executeQuery("select * from query");
+            ResultSet rs = con.createStatement().executeQuery("select * from query where Subject = 'CN'");
 
             while (rs.next()){
                 oblist.add(new ModelTable(rs.getString("USN"),rs.getString("query")));
@@ -57,17 +58,7 @@ public class TableController implements Initializable {
         queryCol.setCellValueFactory(new PropertyValueFactory<>("doubt"));
 
         queryTable.setItems(oblist);
-        back_button.setOnAction((event) -> {
-            final Stage stage = (Stage) back_button.getScene().getWindow();
-            try {
-                Parent root = FXMLLoader.load(getClass().getResource("StudentHome.fxml"));
-                Scene scene = new Scene(root, 800, 400);
-                stage.setScene(scene);
-                stage.show();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
+
 
     }
 }

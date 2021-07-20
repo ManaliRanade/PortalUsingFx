@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
 
     <Label layoutX="261.0" layoutY="35.0" prefHeight="18.0" prefWidth="78.0" text="HOME">
         <font>
@@ -16,10 +17,10 @@
          <Font size="15.0" />
       </font></Label>
 
-    <Button id="OOPS_button" fx:id="OOPS_button" layoutX="85.0" layoutY="130.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="214.0" text="OOPS" />
-    <Button id="MCES_button" fx:id="MCES_button" layoutX="307.0" layoutY="130.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="214.0" text="MCES" />
-    <Button id="DAA_button" fx:id="DAA_button" layoutX="85.0" layoutY="209.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="214.0" text="DAA" />
-    <Button id="CN_button" fx:id="CN_button" layoutX="307.0" layoutY="209.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="214.0" text="CN" />
+    <Button id="OOPS_button" fx:id="OOPS_button" layoutX="85.0" layoutY="130.0" mnemonicParsing="false" onAction="#goToOOPSDoubtsTeacher" prefHeight="63.0" prefWidth="214.0" text="OOPS" />
+    <Button id="MCES_button" fx:id="MCES_button" layoutX="307.0" layoutY="130.0" mnemonicParsing="false" onAction="#goToMCESDoubtsTeacher" prefHeight="63.0" prefWidth="214.0" text="MCES" />
+    <Button id="DAA_button" fx:id="DAA_button" layoutX="85.0" layoutY="209.0" mnemonicParsing="false" onAction="#goToDAADoubtsTeacher" prefHeight="63.0" prefWidth="214.0" text="DAA" />
+    <Button id="CN_button" fx:id="CN_button" layoutX="307.0" layoutY="209.0" mnemonicParsing="false" onAction="#goToCNDoubtsTeacher" prefHeight="63.0" prefWidth="214.0" text="CN" />
 
 
 </AnchorPane>

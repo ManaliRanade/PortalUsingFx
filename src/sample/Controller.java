@@ -23,8 +23,10 @@ import java.sql.Statement;
 
 public class Controller {
 
+
+
     @FXML
-    private Button student_login_button,teacher_login_button,register_query_button,view_doubts_button,submit_query_button;
+    private Button register_query_button,view_doubts_button,submit_query_button,enter_student,enter_teacher,OOPS_button;
     @FXML
     private TextField USN_textbox, course_name;
     @FXML
@@ -34,18 +36,29 @@ public class Controller {
 
 
     @FXML
-    private void showHome(ActionEvent event) throws IOException {
+    public void goToTeacherHome(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-        if (event.getSource() == student_login_button) {
-            stage = (Stage) student_login_button.getScene().getWindow();
-//            root = FXMLLoader.load(getClass().getResource("StudentHome.fxml"));
-            root = FXMLLoader.load(getClass().getResource("StudentHome.fxml"));
-        } else {
-            stage = (Stage) teacher_login_button.getScene().getWindow();
-//            root = FXMLLoader.load(getClass().getResource("TeacherHome.fxml"));
+
+
+            stage = (Stage) enter_teacher.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("TeacherHome.fxml"));
-        }
+
+        Scene scene = new Scene(root, 600, 400);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void goToStudentHome(ActionEvent event) throws IOException {
+        Stage stage;
+        Parent root;
+
+
+        stage = (Stage) enter_student.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("StudentHome.fxml"));
+
+
 
         Scene scene = new Scene(root, 600, 275);
         stage.setScene(scene);
@@ -65,6 +78,56 @@ public class Controller {
             stage = (Stage) view_doubts_button.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("QueryDisplay.fxml"));
         }
+
+        Scene scene = new Scene(root, 800, 400);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void goToOOPSDoubtsTeacher(ActionEvent event) throws IOException,SQLException {
+        Stage stage;
+        Parent root;
+
+        stage = (Stage) OOPS_button.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("OOPSQueryDisplay.fxml"));
+
+        Scene scene = new Scene(root, 800, 400);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    private void goToDAADoubtsTeacher(ActionEvent event) throws IOException,SQLException {
+        Stage stage;
+        Parent root;
+
+        stage = (Stage) OOPS_button.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("DAAQueryDisplay.fxml"));
+
+        Scene scene = new Scene(root, 800, 400);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    private void goToMCESDoubtsTeacher(ActionEvent event) throws IOException,SQLException {
+        Stage stage;
+        Parent root;
+
+        stage = (Stage) OOPS_button.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("MCESQueryDisplay.fxml"));
+
+        Scene scene = new Scene(root, 800, 400);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void goToCNDoubtsTeacher(ActionEvent event) throws IOException,SQLException {
+        Stage stage;
+        Parent root;
+
+        stage = (Stage) OOPS_button.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("CNQueryDisplay.fxml"));
 
         Scene scene = new Scene(root, 800, 400);
         stage.setScene(scene);
@@ -94,10 +157,17 @@ public class Controller {
             statement.executeUpdate(sql2);
 
             stage = (Stage) submit_query_button.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("StudentHome.fxml"));
-            Scene scene = new Scene(root, 800, 400);
-            stage.setScene(scene);
-            stage.show();
+            try {
+                 root = FXMLLoader.load(getClass().getResource("StudentHome.fxml"));
+                Scene scene = new Scene(root, 800, 400);
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+//            Scene scene = new Scene(root, 800, 400);
+//            stage.setScene(scene);
+//            stage.show();
         }
 
     }

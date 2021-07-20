@@ -17,7 +17,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("LoginFirst.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
 
         Scene scene = new Scene(root, 600, 500);
 
@@ -27,18 +27,18 @@ public class Main extends Application {
     }
 
 
-    private void showLoginFirst() throws IOException {
-        try{
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("LoginFirst.fxml"));
-            AnchorPane LoginFirstView = (AnchorPane) loader.load();
-
-            rootLayout.setCenter(LoginFirstView);
-        }
-        catch(IOException e){
-            e.printStackTrace();
-        }
-    }
+//    private void showLoginFirst() throws IOException {
+//        try{
+//            FXMLLoader loader = new FXMLLoader();
+//            loader.setLocation(Main.class.getResource("LoginFirst.fxml"));
+//            AnchorPane LoginFirstView = (AnchorPane) loader.load();
+//
+//            rootLayout.setCenter(LoginFirstView);
+//        }
+//        catch(IOException e){
+//            e.printStackTrace();
+//        }
+//    }
 
     private void initRootLayout() {
         try{
