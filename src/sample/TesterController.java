@@ -57,6 +57,8 @@ public class TesterController implements Initializable {
         queryCol.setCellValueFactory(new PropertyValueFactory<>("doubt"));
 
         queryTable.setItems(oblist);
+
+
 //        back_button.setOnAction((event) -> {
 //            final Stage stage = (Stage) back_button.getScene().getWindow();
 //            try {

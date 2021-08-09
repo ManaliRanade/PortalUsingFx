@@ -12,6 +12,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sample.model.SampleModelTable;
 
 import java.io.IOException;
 
@@ -22,7 +23,6 @@ import java.sql.Statement;
 
 
 public class Controller {
-
 
 
     @FXML

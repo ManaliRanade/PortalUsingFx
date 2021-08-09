@@ -3,24 +3,21 @@ package sample;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import dbConnection.connectionClass;
 
-import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
+import javafx.scene.control.cell.TextFieldTableCell;
+//import sample.model.SampleModelTable;
 
 public class CNController implements Initializable {
 
@@ -30,15 +27,20 @@ public class CNController implements Initializable {
     private TableColumn<ModelTable,String> queryUSN;
     @FXML
     private TableColumn<ModelTable,String> queryCol;
+//    @FXML
+//    private TableColumn<ModelTable,String> queryAns;
+//    @FXML
+//    private TableColumn<ModelTable,Button> Button;
     @FXML
-    private Button back_button;
+//    private Button back_button;
 
 
     ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
 
     //    @Override
     public  void initialize(URL url, ResourceBundle resourceBundle)  {
-        TableView.setEditable(true);
+
+
         try{
             connectionClass connectionClass = new connectionClass();
             Connection con = connectionClass.getConnection();
@@ -54,11 +56,15 @@ public class CNController implements Initializable {
         }
 
 
+
         queryUSN.setCellValueFactory(new PropertyValueFactory<>("usn"));
         queryCol.setCellValueFactory(new PropertyValueFactory<>("doubt"));
+//        queryAns.setCellValueFactory(new PropertyValueFactory<>("answers"));
 
         queryTable.setItems(oblist);
 
 
     }
+
+
 }

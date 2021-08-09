@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -33,20 +30,9 @@
             <Label id="Course_Name_textbox_label" fx:id="Course_Name_textbox_label" layoutX="27.0" layoutY="98.0" text="Course Name:" />
             <TextArea id="student_doubt_textbox" fx:id="query_detail" layoutX="27.0" layoutY="188.0" prefHeight="173.0" prefWidth="476.0" />
             <Label id="comments_label_doubt_box" layoutX="27.0" layoutY="165.0" text="Post your query:" />
-            <ComboBox fx:id="course_name_list" layoutX="27.0" layoutY="119.0" prefHeight="26.0" prefWidth="149.0">
-               <items>
-                  <FXCollections fx:factory="observableArrayList">
-                     <String fx:id="OOPS" fx:value="OOPS" />
-                     <String fx:id="DAA" fx:value="DAA" />
-                     <String fx:id="MCES" fx:value="MCES" />
-                     <String fx:id="CN" fx:value="CN" />
-                  </FXCollections>
-               </items>
-            </ComboBox>
 
             <Button fx:id="submit_query_button" layoutX="503.0" layoutY="29.0" mnemonicParsing="false" onAction="#saveData" text="Submit" />
-            <TextField fx:id="course_name" layoutX="239.0" layoutY="120.0" />
-            <Label id="Course_Name_textbox_label" fx:id="Course_Name_textbox_label1" layoutX="255.0" layoutY="93.0" text="Course Name:" />
+            <TextField fx:id="course_name" layoutX="26.0" layoutY="122.0" />
          </children>
       </AnchorPane>
    </children>
