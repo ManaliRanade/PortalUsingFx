@@ -8,18 +8,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import sample.model.SampleModelTable;
 
 import java.io.IOException;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+import java.util.regex.Pattern;
 
 
 public class Controller {
@@ -28,7 +26,7 @@ public class Controller {
     @FXML
     private Button register_query_button,view_doubts_button,submit_query_button,enter_student,enter_teacher,OOPS_button, teacher_login_button, student_login_button;
     @FXML
-    private TextField USN_textbox, course_name;
+    private TextField USN_textbox, course_name, Username_textbox, TUsername_textbox;
     @FXML
     private TextArea query_detail;
 //    @FXML
@@ -39,7 +37,7 @@ public class Controller {
         Stage stage;
         Parent root;
         stage = (Stage) student_login_button.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+        root = FXMLLoader.load(getClass().getResource("StudentLoginPage.fxml"));
         Scene scene = new Scene(root, 600, 400);
         stage.setScene(scene);
         stage.show();
@@ -60,25 +58,42 @@ public class Controller {
     public void goToTeacherHome(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-
-
-        stage = (Stage) enter_teacher.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("TeacherHome.fxml"));
-
-        Scene scene = new Scene(root, 600, 400);
-        stage.setScene(scene);
-        stage.show();
+        if(Pattern.matches(".*@rvce.edu.in",TUsername_textbox.getText())){
+            stage = (Stage) enter_teacher.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("TeacherHome.fxml"));
+            Scene scene = new Scene(root, 600, 400);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else{
+            System.out.println("Invalid username");
+            stage=(Stage) enter_teacher.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("TeacherLoginPage.fxml"));
+            Scene scene = new Scene(root, 600, 400);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     @FXML
     private void goToStudentHome(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-        stage = (Stage) enter_student.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("StudentHome.fxml"));
-        Scene scene = new Scene(root, 600, 400);
-        stage.setScene(scene);
-        stage.show();
+        if(Pattern.matches("1RV[0-9]{2}[A-Z]{2}[0-9]{3}",Username_textbox.getText())){
+            stage = (Stage) enter_student.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("StudentHome.fxml"));
+            Scene scene = new Scene(root, 600, 400);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else{
+            System.out.println("Invalid username");
+            stage=(Stage) enter_student.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("StudentLoginPage.fxml"));
+            Scene scene = new Scene(root, 600, 400);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     @FXML
@@ -92,7 +107,7 @@ public class Controller {
         }
         else {
             stage = (Stage) view_doubts_button.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("QueryDisplay.fxml"));
+            root = FXMLLoader.load(getClass().getResource("StudentQueryDisplay.fxml"));
         }
 
         Scene scene = new Scene(root, 800, 400);
