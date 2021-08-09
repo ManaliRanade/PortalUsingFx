@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CNController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CNController">
     <children>
         <AnchorPane layoutX="1.0" layoutY="-2.0" prefHeight="407.0" prefWidth="600.0">
             <children>
@@ -12,12 +11,14 @@
                     <columns>
                         <TableColumn fx:id="queryUSN" prefWidth="180.0" text="Student USN" />
                         
-                        <TableColumn fx:id="queryCol" prefWidth="220.0" text="Query" />
-                        <TableColumn fx:id="queryAns" prefWidth="220.0" text="Answers" />
-
+                        <TableColumn fx:id="queryCol" prefWidth="190.99998474121094" text="Query" />
+                        <TableColumn fx:id="queryAns" prefWidth="214.5999755859375" text="Answers" />
                     </columns>
                 </TableView>
+                <Button fx:id="back_button" layoutX="549.0" layoutY="2.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="53.0" text="Back" />
             </children>
+
+
         </AnchorPane>
     </children>
 </AnchorPane>

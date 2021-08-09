@@ -26,7 +26,7 @@ public class Controller {
 
 
     @FXML
-    private Button register_query_button,view_doubts_button,submit_query_button,enter_student,enter_teacher,OOPS_button;
+    private Button register_query_button,view_doubts_button,submit_query_button,enter_student,enter_teacher,OOPS_button, teacher_login_button, student_login_button;
     @FXML
     private TextField USN_textbox, course_name;
     @FXML
@@ -34,6 +34,27 @@ public class Controller {
 //    @FXML
 //    private ComboBox course_name_list;
 
+    @FXML
+    private void goToStudentLogin(ActionEvent event) throws IOException {
+        Stage stage;
+        Parent root;
+        stage = (Stage) student_login_button.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+        Scene scene = new Scene(root, 600, 400);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    public void goToTeacherLogin(ActionEvent event) throws IOException {
+        Stage stage;
+        Parent root;
+        stage = (Stage) teacher_login_button.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("TeacherLoginPage.fxml"));
+        Scene scene = new Scene(root, 600, 400);
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @FXML
     public void goToTeacherHome(ActionEvent event) throws IOException {
@@ -41,8 +62,8 @@ public class Controller {
         Parent root;
 
 
-            stage = (Stage) enter_teacher.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("TeacherHome.fxml"));
+        stage = (Stage) enter_teacher.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("TeacherHome.fxml"));
 
         Scene scene = new Scene(root, 600, 400);
         stage.setScene(scene);
@@ -53,14 +74,9 @@ public class Controller {
     private void goToStudentHome(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-
-
         stage = (Stage) enter_student.getScene().getWindow();
         root = FXMLLoader.load(getClass().getResource("StudentHome.fxml"));
-
-
-
-        Scene scene = new Scene(root, 600, 275);
+        Scene scene = new Scene(root, 600, 400);
         stage.setScene(scene);
         stage.show();
     }

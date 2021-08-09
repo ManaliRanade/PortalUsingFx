@@ -17,9 +17,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("LoginFirst.fxml"));
 
-        Scene scene = new Scene(root, 600, 500);
+        Scene scene = new Scene(root, 600, 400);
 
         stage.setTitle("Query Portal");
         stage.setScene(scene);
