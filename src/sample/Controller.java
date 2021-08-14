@@ -58,7 +58,7 @@ public class Controller {
     public void goToTeacherHome(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-        if(Pattern.matches(".*@rvce[.]edu[.]in",TUsername_textbox.getText())){
+        if(Pattern.matches(".*@rvce.edu.in",TUsername_textbox.getText())){
             stage = (Stage) enter_teacher.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("TeacherHome.fxml"));
             Scene scene = new Scene(root, 600, 400);
