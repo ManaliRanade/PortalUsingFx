@@ -22,7 +22,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-public class MCESController extends goToTeacherHomeAll implements Initializable {
+public class MCESController implements Initializable {
 
     @FXML
     private TableView<ModelTable> queryTable;
