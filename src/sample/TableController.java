@@ -22,7 +22,12 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+
+
+
 public class TableController implements Initializable {
+
+
 
     @FXML
     private TableView<ModelTable> queryTable;
@@ -32,6 +37,7 @@ public class TableController implements Initializable {
     private TableColumn<ModelTable,String> queryCol;
     @FXML
     private Button back_button;
+
 
 
     ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
@@ -68,6 +74,10 @@ public class TableController implements Initializable {
                 e.printStackTrace();
             }
         });
+
+
+
+
 
     }
 }

@@ -1,7 +1,11 @@
 package sample;
 
+import javafx.scene.control.Button;
+
 public class ModelTable {
     String usn,doubt;
+    String answers;
+//    Button update;
 
     public ModelTable(String usn,String doubt){
         this.usn = usn;
@@ -22,5 +26,14 @@ public class ModelTable {
 
     public void setDoubt(String doubt) {
         this.doubt = doubt;
+    }
+
+    public void setAnswers(String answers) {
+
+        this.answers = answers;
+    }
+
+    public String getAnswers() {
+        return answers;
     }
 }

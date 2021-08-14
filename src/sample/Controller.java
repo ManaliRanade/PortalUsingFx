@@ -190,7 +190,7 @@ public class Controller {
             stage = (Stage) submit_query_button.getScene().getWindow();
             try {
                  root = FXMLLoader.load(getClass().getResource("StudentHome.fxml"));
-                Scene scene = new Scene(root, 800, 400);
+                Scene scene = new Scene(root, 600, 400);
                 stage.setScene(scene);
                 stage.show();
             } catch (IOException e) {

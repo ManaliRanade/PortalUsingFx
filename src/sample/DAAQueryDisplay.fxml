@@ -6,7 +6,7 @@
 
 
 <?import javafx.scene.control.Button?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DAAController">
     <children>
         <AnchorPane layoutX="1.0" layoutY="-2.0" prefHeight="407.0" prefWidth="600.0">
             <children>
@@ -16,7 +16,7 @@
                         <TableColumn fx:id="queryCol" prefWidth="300.0" text="Query" />
                     </columns>
                 </TableView>
-                <Button fx:id="back_button" onAction="#goToTeacherHome" layoutX="549.0" layoutY="2.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="53.0" text="Back" />
+                <Button fx:id="back_button_daa"  layoutX="549.0" layoutY="2.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="53.0" text="Back" />
             </children>
         </AnchorPane>
     </children>

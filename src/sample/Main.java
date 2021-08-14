@@ -43,7 +43,7 @@ public class Main extends Application {
     private void initRootLayout() {
         try{
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/RootLayout.fxml"));
+            loader.setLocation(Main.class.getResource("RootLayout.fxml"));
             rootLayout = (BorderPane)loader.load();
 
             Scene scene = new Scene(rootLayout);

@@ -31,7 +31,7 @@ public class MCESController implements Initializable {
     @FXML
     private TableColumn<ModelTable,String> queryCol;
     @FXML
-    private Button back_button;
+    private Button back_button_mces;
 
 
     ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
@@ -58,6 +58,17 @@ public class MCESController implements Initializable {
 
         queryTable.setItems(oblist);
 
+        back_button_mces.setOnAction((event) -> {
+            final Stage stage = (Stage) back_button_mces.getScene().getWindow();
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("TeacherHome.fxml"));
+                Scene scene = new Scene(root, 800, 400);
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
     }
 }

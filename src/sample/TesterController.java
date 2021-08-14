@@ -31,7 +31,7 @@ public class TesterController implements Initializable {
     @FXML
     private TableColumn<ModelTable,String> queryCol;
     @FXML
-    private Button back_button;
+    private Button back_button_oops;
 
 
     ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
@@ -59,17 +59,17 @@ public class TesterController implements Initializable {
         queryTable.setItems(oblist);
 
 
-//        back_button.setOnAction((event) -> {
-//            final Stage stage = (Stage) back_button.getScene().getWindow();
-//            try {
-//                Parent root = FXMLLoader.load(getClass().getResource("StudentHome.fxml"));
-//                Scene scene = new Scene(root, 800, 400);
-//                stage.setScene(scene);
-//                stage.show();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        });
+        back_button_oops.setOnAction((event) -> {
+            final Stage stage = (Stage) back_button_oops.getScene().getWindow();
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("TeacherHome.fxml"));
+                Scene scene = new Scene(root, 800, 400);
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
     }
 }
