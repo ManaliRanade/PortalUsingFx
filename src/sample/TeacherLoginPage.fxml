@@ -18,4 +18,5 @@
     <Label id="TPassword_textbox_label" fx:id="TPassword_textbox_label" layoutX="220.0" layoutY="200.0" text="Password:" />
     <Button fx:id="enter_teacher" layoutX="273.0" layoutY="282.0" mnemonicParsing="false" onAction="#goToTeacherHome" prefHeight="26.0" prefWidth="53.0" text="Login" />
     <PasswordField layoutX="226.0" layoutY="225.0" />
+    <Label fx:id="invalid" layoutX="246.0" layoutY="106.0" text="Incorrect credentials" visible="false" />
 </AnchorPane>
