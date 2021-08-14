@@ -43,26 +43,6 @@ public class CNController implements Initializable {
     @FXML
     private Button back_button_cn;
 
-//    public void answerEvent() throws SQLException {
-//            String answer = queryAns.getText();
-//
-//            connectionClass connectionClass = new connectionClass();
-//            Connection connection = connectionClass.getConnection();
-//            Statement statement = connection.createStatement();
-//            String sql2 = "INSERT INTO `answer` (Answer) VALUES ('" + answer + "')";
-//            statement.executeUpdate(sql2);
-//
-//
-//
-//    }
-
-//    private void loadData() throws SQLException{
-//        connectionClass connectionClass = new connectionClass();
-//            Connection connection = connectionClass.getConnection();
-//            Statement statement = connection.createStatement();
-//        queryAns.setCellValueFactory(new PropertyValueFactory<>("answers"));
-//    }
-
     public void updateData() {
         String answer = queryAns.getText();
         try{

@@ -32,8 +32,7 @@ public class Controller {
     private TextArea query_detail;
     @FXML
     Label invalid=new Label("Incorrect credentials");
-    //@FXML
-    //Label invalidT=new Label("Incorrect credentials");
+
 
     @FXML
     private void goToStudentLogin(ActionEvent event) throws IOException {
@@ -201,7 +200,6 @@ public class Controller {
             Connection connection = connectionClass.getConnection();
 
             Statement statement = connection.createStatement();
-//        statement.executeUpdate(sql);
             String sql2 = "INSERT INTO `query` (`USN`, `query`,`Subject`) VALUES ('"+usn+"','"+doubt+"','"+course+"')";
             statement.executeUpdate(sql2);
 

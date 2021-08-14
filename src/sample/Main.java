@@ -26,20 +26,6 @@ public class Main extends Application {
         stage.show();
     }
 
-
-//    private void showLoginFirst() throws IOException {
-//        try{
-//            FXMLLoader loader = new FXMLLoader();
-//            loader.setLocation(Main.class.getResource("LoginFirst.fxml"));
-//            AnchorPane LoginFirstView = (AnchorPane) loader.load();
-//
-//            rootLayout.setCenter(LoginFirstView);
-//        }
-//        catch(IOException e){
-//            e.printStackTrace();
-//        }
-//    }
-
     private void initRootLayout() {
         try{
             FXMLLoader loader = new FXMLLoader();

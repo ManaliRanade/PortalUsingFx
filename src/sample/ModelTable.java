@@ -1,11 +1,8 @@
 package sample;
 
-import javafx.scene.control.Button;
-
 public class ModelTable {
     String usn,doubt;
     String answers;
-//    Button update;
 
     public ModelTable(String usn,String doubt){
         this.usn = usn;
